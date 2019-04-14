@@ -1,4 +1,4 @@
-FROM node:11-alpine 
+FROM node:11-alpine nodebuild
 
 RUN mkdir -p /www/app
 WORKDIR /www/app
