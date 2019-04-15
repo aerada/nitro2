@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: nitro2
-        image: karthi102/nitro2:latest
+        image: karthi102/nitro:37
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

@@ -1,0 +1,14 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+  name: nitro2
+  namespace: default
+spec:
+  maxReplicas: 5
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1
+    kind: Deployment
+    name: nitro2
+  targetCPUUtilizationPercentage: 1
