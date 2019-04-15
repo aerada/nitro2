@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nitro2-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nito2
+    spec:
+      containers:
+      - name: nitro2
+        image: karthi102/nitro2:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
