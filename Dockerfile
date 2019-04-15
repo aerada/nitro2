@@ -5,7 +5,8 @@ WORKDIR /www/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
+	yum -y install nodejs gcc-c++ make yum-utils libpng-devel && yum clean all &&  npm install
 
 COPY lerna.json ./
 COPY packages ./
